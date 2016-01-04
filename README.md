@@ -1,4 +1,4 @@
-# es2015
+# ES2015
 **筛选 es6 重要知识点**
 #参考资料
 + [阮一峰](http://es6.ruanyifeng.com)
