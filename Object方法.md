@@ -24,3 +24,41 @@ class Point {
 }
 
 ```
+
+##给对象属性提供默认值
+```javascript
+const DEFAULTS = {
+    logLevel: 0,
+    outputFormat: 'html'
+};
+function processContent(options) {
+    options = Object.assign({}, DEFAULTS, options); // (A)
+		console.log(options);
+}
+
+processContent({
+	name: "yang",
+	age:28
+})
+
+//Object {logLevel: 0, outputFormat: "html", name: "yang", age: 28}
+```
+
+##给对象添加方法
+```javascript
+Object.assign(SomeClass.prototype, {
+    someMethod(arg1, arg2) {
+        ···
+    },
+    anotherMethod() {
+        ···
+    }
+});
+//相当于
+SomeClass.prototype.someMethod = function (arg1, arg2) {
+    ···
+};
+SomeClass.prototype.anotherMethod = function () {
+    ···
+};
+```
